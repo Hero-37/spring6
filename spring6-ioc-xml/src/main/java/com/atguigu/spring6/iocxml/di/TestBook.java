@@ -12,4 +12,11 @@ public class TestBook {
         Book book = context.getBean("book", Book.class);
         System.out.println(book.toString());
     }
+
+    @Test
+    public void testConstructor() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean-di.xml");
+        Book book = context.getBean("bookConstructor", Book.class);
+        System.out.println(book.toString());
+    }
 }

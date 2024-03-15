@@ -7,10 +7,11 @@ public class Book {
     private String author;
 
     public Book() {
-
+        System.out.println("无参构造.......");
     }
 
     public Book(String bname, String author) {
+        System.out.println("有参构造......");
         this.bname = bname;
         this.author = author;
     }
