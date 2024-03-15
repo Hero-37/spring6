@@ -4,7 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- user 对象的创建 -->
-    <bean id="user" class="com.atguigu.spring6.iocxml.User">
+    <bean id="user" class="com.atguigu.spring6.iocxml.User"></bean>
 
-    </bean>
+    <!-- 接口实现类创建过程 -->
+    <bean id="userDaoImpl" class="com.atguigu.spring6.iocxml.bean.UserDaoImpl"></bean>
 </beans>
