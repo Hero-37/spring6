@@ -7,6 +7,9 @@
     <bean id="book" class="com.atguigu.spring6.iocxml.di.Book">
         <property name="bname" value="Go"></property>
         <property name="author" value="Hero"></property>
+        <property name="others">
+            <null/>
+        </property>
     </bean>
 
     <!-- 2 构造器注入 -->
