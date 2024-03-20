@@ -77,4 +77,35 @@
             </list>
         </property>
     </bean>
+
+    <!-- Map 类型注入 -->
+    <bean id="teacher" class="com.atguigu.spring6.iocxml.di.Teacher">
+        <property name="teacherId" value="teacher1"></property>
+        <property name="teacherName" value="name1"></property>
+    </bean>
+    <bean id="teacher2" class="com.atguigu.spring6.iocxml.di.Teacher">
+        <property name="teacherId" value="teacher2"></property>
+        <property name="teacherName" value="name2"></property>
+    </bean>
+
+    <bean id="student" class="com.atguigu.spring6.iocxml.di.Student">
+        <property name="sid" value="sid1"></property>
+        <property name="sname" value="name1"></property>
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10010</value>
+                    </key>
+                    <ref bean="teacher"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10011</value>
+                    </key>
+                    <ref bean="teacher2"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
 </beans>
