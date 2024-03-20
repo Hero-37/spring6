@@ -40,4 +40,16 @@
             </bean>
         </property>
     </bean>
+
+    <!-- 第三种方式：级联复制 -->
+    <bean id="department3" class="com.atguigu.spring6.iocxml.di.Department">
+        <property name="dName" value="部门2"></property>
+    </bean>
+
+    <bean id="employee3" class="com.atguigu.spring6.iocxml.di.Employee">
+        <property name="eName" value="Hero3"></property>
+        <property name="age" value="50"></property>
+        <property name="department" ref="department3"></property>
+        <property name="department.dName" value="级联"></property>
+    </bean>
 </beans>
