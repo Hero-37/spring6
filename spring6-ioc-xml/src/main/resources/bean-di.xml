@@ -28,4 +28,16 @@
         <property name="age" value="50"></property>
         <property name="department" ref="department"></property>
     </bean>
+
+    <!-- 第二种方式：引入内部 bean -->
+    <bean id="employee2" class="com.atguigu.spring6.iocxml.di.Employee">
+        <property name="eName" value="Hero2"></property>
+        <property name="age" value="50"></property>
+        <!-- 内部 bean -->
+        <property name="department">
+            <bean id="department2" class="com.atguigu.spring6.iocxml.di.Department">
+                <property name="dName" value="部门2"></property>
+            </bean>
+        </property>
+    </bean>
 </beans>
