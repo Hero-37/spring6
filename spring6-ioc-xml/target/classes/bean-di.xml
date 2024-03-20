@@ -17,4 +17,15 @@
         <constructor-arg name="bname" value="Python"></constructor-arg>
         <constructor-arg name="author" value="Hero"></constructor-arg>
     </bean>
+
+    <!-- 第一种方式：引入外部 bean -->
+    <bean id="department" class="com.atguigu.spring6.iocxml.di.Department">
+        <property name="dName" value="部门"></property>
+    </bean>
+
+    <bean id="employee" class="com.atguigu.spring6.iocxml.di.Employee">
+        <property name="eName" value="Hero"></property>
+        <property name="age" value="50"></property>
+        <property name="department" ref="department"></property>
+    </bean>
 </beans>
