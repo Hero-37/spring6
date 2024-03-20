@@ -52,4 +52,18 @@
         <property name="department" ref="department3"></property>
         <property name="department.dName" value="级联"></property>
     </bean>
+
+    <!-- 数组类型属性 -->
+    <bean id="employee4" class="com.atguigu.spring6.iocxml.di.Employee">
+        <property name="eName" value="Hero4"></property>
+        <property name="age" value="50"></property>
+        <property name="department" ref="department"></property>
+        <property name="hobbies">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
+    </bean>
 </beans>
