@@ -66,4 +66,15 @@
             </array>
         </property>
     </bean>
+
+    <!-- List 类型注入 -->
+    <bean id="department4" class="com.atguigu.spring6.iocxml.di.Department">
+        <property name="dName" value="部门2"></property>
+        <property name="empList">
+            <list>
+                <ref bean="employee"></ref>
+                <ref bean="employee2"></ref>
+            </list>
+        </property>
+    </bean>
 </beans>
