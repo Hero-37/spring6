@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 1 set 方法注入 -->
     <bean id="book" class="com.atguigu.spring6.iocxml.di.Book">
@@ -108,4 +112,37 @@
             </map>
         </property>
     </bean>
+
+    <bean id="lesson" class="com.atguigu.spring6.iocxml.di.Lesson">
+        <property name="lname" value="java"></property>
+    </bean>
+    <bean id="lesson2" class="com.atguigu.spring6.iocxml.di.Lesson">
+        <property name="lname" value="Go"></property>
+    </bean>
+
+    <bean id="student2" class="com.atguigu.spring6.iocxml.di.Student">
+        <property name="sid" value="10010"></property>
+        <property name="sname" value="电信"></property>
+        <!-- 注入 list、map 类型的属性 -->
+        <property name="lessonList" ref="lessonList"></property>
+        <property name="teacherMap" ref="teacherType"></property>
+    </bean>
+    <util:list id="lessonList">
+        <ref bean="lesson"></ref>
+        <ref bean="lesson2"></ref>
+    </util:list>
+    <util:map id="teacherType">
+        <entry>
+            <key>
+                <value>10010</value>
+            </key>
+            <ref bean="teacher"></ref>
+        </entry>
+        <entry>
+            <key>
+                <value>10086</value>
+            </key>
+            <ref bean="teacher2"></ref>
+        </entry>
+    </util:map>
 </beans>

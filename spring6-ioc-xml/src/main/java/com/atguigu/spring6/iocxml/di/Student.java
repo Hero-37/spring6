@@ -1,5 +1,6 @@
 package com.atguigu.spring6.iocxml.di;
 
+import java.util.List;
 import java.util.Map;
 
 public class Student {
@@ -10,9 +11,12 @@ public class Student {
 
     private Map<String, Teacher> teacherMap;
 
+    private List<Lesson> lessonList;
+
     public void run() {
         System.out.println("学生Id: " + sid + "; 学生姓名: " + sname);
         System.out.println(teacherMap);
+        System.out.println(lessonList);
     }
 
     public String getSid() {
@@ -37,6 +41,14 @@ public class Student {
 
     public void setTeacherMap(Map<String, Teacher> teacherMap) {
         this.teacherMap = teacherMap;
+    }
+
+    public List<Lesson> getLessonList() {
+        return lessonList;
+    }
+
+    public void setLessonList(List<Lesson> lessonList) {
+        this.lessonList = lessonList;
     }
 
     @Override
