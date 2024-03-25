@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util.xsd
        http://www.springframework.org/schema/beans
@@ -145,4 +146,9 @@
             <ref bean="teacher2"></ref>
         </entry>
     </util:map>
+
+    <!-- p 命名空间注入 -->
+    <bean id="studentp" class="com.atguigu.spring6.iocxml.di.Student"
+    p:sid="p命名空间" p:sname="pname" p:lessonList-ref="lessonList" p:teacherMap-ref="teacherType">
+    </bean>
 </beans>
