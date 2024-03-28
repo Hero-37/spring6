@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-first" />
         <module name="spring6-ioc-xml" />
+        <module name="spring6-ioc-annotation" />
       </profile>
     </annotationProcessing>
   </component>
