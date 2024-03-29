@@ -9,8 +9,14 @@ public class UserServiceImpl implements IUserService{
 
     // 根据类型找到对象，完成注入
     // 1. 属性注入
-    @Autowired
+    // @Autowired
     private IUserDao userDao;
+
+    // 2. set 方法注入
+    @Autowired
+    public void setUserDao(IUserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public void add() {
