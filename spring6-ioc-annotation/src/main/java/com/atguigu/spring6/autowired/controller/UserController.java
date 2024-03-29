@@ -19,8 +19,13 @@ public class UserController {
     // }
 
     // 3. 构造方法注入
-    @Autowired
-    public UserController(IUserService userService) {
+    // @Autowired
+    // public UserController(IUserService userService) {
+    //     this.userService = userService;
+    // }
+
+    // 4. 形参上注入
+    public UserController(@Autowired IUserService userService) {
         this.userService = userService;
     }
 

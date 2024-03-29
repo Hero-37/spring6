@@ -19,8 +19,13 @@ public class UserServiceImpl implements IUserService{
     // }
 
     // 3. 构造方法注入
-    @Autowired
-    public UserServiceImpl(IUserDao userDao) {
+    // @Autowired
+    // public UserServiceImpl(IUserDao userDao) {
+    //     this.userDao = userDao;
+    // }
+
+    // 4. 形参上注入
+    public UserServiceImpl(@Autowired IUserDao userDao) {
         this.userDao = userDao;
     }
 
