@@ -2,6 +2,7 @@ package com.atguigu.spring6.autowired.service;
 
 import com.atguigu.spring6.autowired.dao.IUserDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,6 +11,9 @@ public class UserServiceImpl implements IUserService{
     // 根据类型找到对象，完成注入
     // 1. 属性注入
     // @Autowired
+    // 6. Autowired 结合 Qualifier, 实现按名称注入
+    @Autowired
+    @Qualifier(value = "userDaoImpl")
     private IUserDao userDao;
 
     // 2. set 方法注入
