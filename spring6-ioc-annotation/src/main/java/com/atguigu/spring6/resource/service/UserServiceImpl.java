@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service("myUserServiceImpl")
 public class UserServiceImpl implements IUserService {
 
+    // 不指定名称，按照属性名匹配
     @Resource
     private IUserDao myUserDao;
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 @Controller("myController")
 public class UserController {
 
+    // 指定名称匹配
     @Resource(name = "myUserServiceImpl")
     private IUserService userService;
 
