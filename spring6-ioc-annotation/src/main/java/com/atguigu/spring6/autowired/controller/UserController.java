@@ -25,7 +25,12 @@ public class UserController {
     // }
 
     // 4. 形参上注入
-    public UserController(@Autowired IUserService userService) {
+    // public UserController(@Autowired IUserService userService) {
+    //     this.userService = userService;
+    // }
+
+    // 5. 只有一个构造函数，无注解(当是有参构造，可以不用注解注入，会自动注入)
+    public UserController(IUserService userService) {
         this.userService = userService;
     }
 
