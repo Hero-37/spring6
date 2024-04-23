@@ -18,7 +18,8 @@ public class LogAspect {
         System.out.println("Logger --> 前置通知, 增强方法名: " + methodName + ", 参数: " + Arrays.toString(args));
     }
 
-    @After(value = "execution(* com.atguigu.spring6.aop.annotationaop.CalculatorImpl.*(..))")
+    // 不同的切面中，可以使用方法的全路径
+    @After(value = "pointCut()")
     public void afterMethod(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
         System.out.println("Logger --> 后置通知, 增强方法名: " + methodName);
@@ -57,5 +58,11 @@ public class LogAspect {
         }
 
         return result;
+    }
+
+    // 重用切入点表达式
+    @Pointcut(value = "execution(* com.atguigu.spring6.aop.annotationaop.CalculatorImpl.*(..))")
+    public void pointCut() {
+
     }
 }
