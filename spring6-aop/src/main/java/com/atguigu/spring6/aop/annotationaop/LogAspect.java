@@ -19,6 +19,7 @@ public class LogAspect {
     }
 
     // 不同的切面中，可以使用方法的全路径
+    // @Order(value) 控制切面优先级，value 越小，优先级越高
     @After(value = "pointCut()")
     public void afterMethod(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
