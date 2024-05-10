@@ -15,4 +15,10 @@ public class TestBookTx {
     public void testBuyBook() {
         bookController.buyBook(1, 1);
     }
+
+    @Test
+    public void testBuySomeBook() {
+        Integer[] bookIds = {1, 2};
+        bookController.buyBook(bookIds, 1);
+    }
 }
