@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-jdbc-tx" />
         <module name="spring6-ioc-xml" />
+        <module name="spring6-resources" />
         <module name="spring6-junit" />
         <module name="atguigu-spring" />
         <module name="spring6-aop" />
