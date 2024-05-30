@@ -3,7 +3,7 @@ package com.spring6.atguigu.javai18n;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class ResourceI18n {
+public class ResourceI18n_1 {
 
     public static void main(String[] args) {
         ResourceBundle bundle = ResourceBundle.getBundle("messages", new Locale("zh", "CN"));
