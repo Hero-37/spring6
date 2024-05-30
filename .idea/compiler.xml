@@ -15,7 +15,11 @@
         <module name="spring-first" />
         <module name="spring6-reflect" />
         <module name="spring6-ioc-annotation" />
+        <module name="i18n" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring6-i18n" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
