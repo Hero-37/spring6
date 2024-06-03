@@ -14,6 +14,7 @@
         <module name="spring6-aop" />
         <module name="spring-first" />
         <module name="spring6-reflect" />
+        <module name="spring6-validator" />
         <module name="spring6-ioc-annotation" />
         <module name="i18n" />
       </profile>
